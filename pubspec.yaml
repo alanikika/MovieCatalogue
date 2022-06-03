@@ -1,0 +1,41 @@
+name: movie_catalogue
+description: A new Flutter project.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.16.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.2
+
+  #libraries module
+  core:
+    path: libraries/core
+  dependencies:
+    path: libraries/dependencies
+  shared:
+    path: libraries/shared
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^1.0.0
+
+flutter:
+
+  uses-material-design: true
+  assets:
+    - assets/images/
+  fonts:
+    - family: SFProDisplayRegular
+      fonts:
+        - asset: assets/fonts/sf_pro_display_regular.ttf
+    - family: SFProDisplayItalic
+      fonts:
+        - asset: assets/fonts/sf_pro_display_italic.ttf
