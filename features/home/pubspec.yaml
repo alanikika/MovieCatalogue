@@ -1,0 +1,34 @@
+name: home
+description: Home module
+version: 0.0.1
+homepage:
+publish_to: 'none'
+
+environment:
+  sdk: ">=2.16.0 <3.0.0"
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  #features
+  movie:
+    path: ../movie
+  tv:
+    path: ../tv
+  profile:
+    path: ../profile
+
+
+  dependencies:
+    path: ../../libraries/dependencies
+  shared:
+    path: ../../libraries/shared
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^1.0.0
+
+flutter:

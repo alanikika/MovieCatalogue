@@ -13,6 +13,16 @@ dependencies:
 
   cupertino_icons: ^1.0.2
 
+  #features
+  home:
+    path: features/home
+  movie:
+    path: features/movie
+  tv:
+    path: features/tv
+  profile:
+    path: features/profile
+
   #libraries module
   core:
     path: libraries/core
