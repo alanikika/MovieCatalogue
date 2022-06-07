@@ -4,6 +4,7 @@ import 'package:flutter_modular/flutter_modular.dart';
 import 'package:home/presentation/bloc/bloc.dart';
 import 'package:movie/presentation/bloc/now_playing_bloc/bloc.dart';
 import 'package:movie/presentation/bloc/popular_bloc/bloc.dart';
+import 'package:movie/presentation/bloc/upcoming_bloc/bloc.dart';
 import 'package:shared/shared.dart';
 
 class MyApp extends StatelessWidget {
@@ -21,6 +22,9 @@ class MyApp extends StatelessWidget {
         ),
         BlocProvider(
           create: (context) => Modular.get<PopularBloc>(),
+        ),
+        BlocProvider(
+          create: (context) => Modular.get<UpComingBloc>(),
         ),
       ],
       child: LayoutBuilder(

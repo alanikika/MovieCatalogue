@@ -8,8 +8,5 @@ import 'package:movie_catalogue/bloc/bloc_observer.dart';
 void main() {
   Bloc.observer = AppBlocObserver();
   WidgetsFlutterBinding.ensureInitialized();
-  // Modular.init(CoreModule(baseUrl: ApiConstants.baseUrl));
-  // Modular.init(SharedModule());
-
   runApp(ModularApp(module: AppModule(), child: const MyApp()));
 }

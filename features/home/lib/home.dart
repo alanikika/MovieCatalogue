@@ -10,6 +10,7 @@ import 'package:movie/domain/repositories/movie_repositories.dart';
 import 'package:movie/domain/usecases/movie_usecase.dart';
 import 'package:movie/presentation/bloc/now_playing_bloc/bloc.dart';
 import 'package:movie/presentation/bloc/popular_bloc/bloc.dart';
+import 'package:movie/presentation/bloc/upcoming_bloc/bloc.dart';
 import 'package:shared/common/routes.dart';
 
 class HomeModule extends Module {
@@ -23,6 +24,7 @@ class HomeModule extends Module {
     Bind((_) => MovieDataSourceImpl(dio: Modular.get<Dio>())),
     Bind((_) => NowPlayingBloc(movieUseCase: Modular.get<MovieUseCase>())),
     Bind((_) => PopularBloc(movieUseCase: Modular.get<MovieUseCase>())),
+    Bind((_) => UpComingBloc(movieUseCase: Modular.get<MovieUseCase>())),
   ];
 
   @override
