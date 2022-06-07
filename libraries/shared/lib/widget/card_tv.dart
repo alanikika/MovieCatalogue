@@ -1,4 +1,4 @@
-// import 'package:cached_network_image/cached_network_image.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:shared/shared.dart';
 
@@ -9,7 +9,7 @@ class CardTv extends StatelessWidget {
   final String? rating;
   final VoidCallback? onTap;
 
-  CardTv({Key? key,
+  const CardTv({Key? key,
     this.imageUrl,
     this.title,
     this.releaseDate,
@@ -30,22 +30,19 @@ class CardTv extends StatelessWidget {
         padding: EdgeInsets.all(Dimens.standard_8(context)),
         child: Row(
           children: [
-            Container(
-              child: ClipRRect(
-                borderRadius: BorderRadius.all(
-                  Radius.circular(
-                    Dimens.standard_12(context),
-                  ),
+            ClipRRect(
+              borderRadius: BorderRadius.all(
+                Radius.circular(
+                  Dimens.standard_12(context),
                 ),
-                child: Text("---- Image ----"),
-                // child: CachedNetworkImage(
-                //   imageUrl: imageUrl.imageOriginal,
-                //   height: Dimens.width(context) / 2.6,
-                //   width: Dimens.width(context) / 3.8,
-                //   fit: BoxFit.cover,
-                //   placeholder: (context, url) => LoadingCircular(),
-                //   errorWidget: (context, url, error) => ErrorImage(),
-                // ),
+              ),
+              child: CachedNetworkImage(
+                imageUrl: imageUrl!.imageOriginal,
+                height: Dimens.width(context) / 2.6,
+                width: Dimens.width(context) / 3.8,
+                fit: BoxFit.cover,
+                placeholder: (context, url) => const LoadingCircular(),
+                errorWidget: (context, url, error) => const ErrorImage(),
               ),
             ),
             SizedBox(

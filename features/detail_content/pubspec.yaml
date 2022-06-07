@@ -1,8 +1,7 @@
-name: home
-description: Home module
+name: detail_content
+description: Detail Content Module
 version: 0.0.1
 homepage:
-publish_to: 'none'
 
 environment:
   sdk: ">=2.16.0 <3.0.0"
@@ -12,21 +11,16 @@ dependencies:
   flutter:
     sdk: flutter
 
-  #features
   movie:
     path: ../movie
   tv:
     path: ../tv
-  profile:
-    path: ../profile
-  detail_content:
-    path: ../detail_content
-
 
   dependencies:
     path: ../../libraries/dependencies
   shared:
     path: ../../libraries/shared
+
 
 dev_dependencies:
   flutter_test:

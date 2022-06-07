@@ -1,3 +1,4 @@
+import 'package:detail_content/presentation/bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_modular/flutter_modular.dart';
@@ -33,6 +34,9 @@ class MyApp extends StatelessWidget {
         ),
         BlocProvider(
           create: (context) => Modular.get<PopularTvBloc>(),
+        ),
+        BlocProvider(
+          create: (context) => Modular.get<DetailBloc>(),
         ),
       ],
       child: LayoutBuilder(

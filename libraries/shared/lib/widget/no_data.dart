@@ -14,12 +14,10 @@ class NoData extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Center(
-          child: Container(
-            child: Image.asset(
-              Modular.get<ImagePath>().noData,
-              width: Dimens.width(context) / 2,
-              height: Dimens.width(context) / 2,
-            ),
+          child: Image.asset(
+            Modular.get<ImagePath>().noData,
+            width: Dimens.width(context) / 2,
+            height: Dimens.width(context) / 2,
           ),
         ),
         Text(

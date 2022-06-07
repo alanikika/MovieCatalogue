@@ -1,5 +1,6 @@
 library home;
 
+import 'package:detail_content/detail_content.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:home/presentation/bloc/bloc.dart';
@@ -22,28 +23,32 @@ import 'package:tv/presentation/bloc/popular/bloc.dart';
 class HomeModule extends Module {
   @override
   List<Bind> get binds => [
-    Bind((_) => HomeBloc(PageLoading())),
-    Bind((_) => MovieUseCaseImpl(
-        movieRepositories: Modular.get<MovieRepositories>())),
-    Bind((_) => MovieRepositoriesImpl(
-        movieDataSource: Modular.get<MovieDataSource>())),
-    Bind((_) => MovieDataSourceImpl(dio: Modular.get<Dio>())),
-    Bind((_) => NowPlayingBloc(movieUseCase: Modular.get<MovieUseCase>())),
-    Bind((_) => PopularBloc(movieUseCase: Modular.get<MovieUseCase>())),
-    Bind((_) => UpComingBloc(movieUseCase: Modular.get<MovieUseCase>())),
-    Bind((_) => TvUsecaseImpl(tvRepository: Modular.get<TvRepository>())),
-    Bind(
+        Bind((_) => HomeBloc(PageLoading())),
+        Bind((_) => MovieUseCaseImpl(
+            movieRepositories: Modular.get<MovieRepositories>())),
+        Bind((_) => MovieRepositoriesImpl(
+            movieDataSource: Modular.get<MovieDataSource>())),
+        Bind((_) => MovieDataSourceImpl(dio: Modular.get<Dio>())),
+        Bind((_) => NowPlayingBloc(movieUseCase: Modular.get<MovieUseCase>())),
+        Bind((_) => PopularBloc(movieUseCase: Modular.get<MovieUseCase>())),
+        Bind((_) => UpComingBloc(movieUseCase: Modular.get<MovieUseCase>())),
+        Bind((_) => TvUsecaseImpl(tvRepository: Modular.get<TvRepository>())),
+        Bind(
             (_) => TvRepositoryImpl(tvDataSource: Modular.get<TvDataSource>())),
-    Bind((_) => TvDataSourceImpl(dio: Modular.get<Dio>())),
-    Bind((_) => OnTheAirBloc(tvUseCase: Modular.get<TvUseCase>())),
-    Bind((_) => PopularTvBloc(tvUseCase: Modular.get<TvUseCase>())),
-  ];
+        Bind((_) => TvDataSourceImpl(dio: Modular.get<Dio>())),
+        Bind((_) => OnTheAirBloc(tvUseCase: Modular.get<TvUseCase>())),
+        Bind((_) => PopularTvBloc(tvUseCase: Modular.get<TvUseCase>())),
+      ];
 
   @override
   List<ModularRoute> get routes => [
-    ChildRoute(
-      Modular.get<Routes>().menu,
-      child: (context, args) => const MenuScreen(),
-    ),
-  ];
+        ChildRoute(
+          Modular.get<Routes>().menu,
+          child: (context, args) => const MenuScreen(),
+        ),
+        ModuleRoute(
+          Modular.get<Routes>().detailModule,
+          module: DetailModule(),
+        ),
+      ];
 }

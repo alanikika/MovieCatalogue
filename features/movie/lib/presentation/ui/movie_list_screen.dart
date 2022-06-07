@@ -133,10 +133,10 @@ class _MovieListScreenState extends State<MovieListScreen> {
                             title: movies[index].title!,
                             url: movies[index].backdropPath,
                             onTap: () {
-                              // Modular.to.pushNamed(
-                              //   Modular.get<Routes>().detailShow,
-                              //   arguments: movies[index],
-                              // );
+                              Modular.to.pushNamed(
+                                Modular.get<Routes>().detailModule,
+                                arguments: movies[index],
+                              );
                             },
                           );
                   },
@@ -171,7 +171,7 @@ class _MovieListScreenState extends State<MovieListScreen> {
         SizedBox(
           height: Dimens.standard_16(context),
         ),
-        Container(
+        SizedBox(
           width: Dimens.width(context),
           height: Dimens.width(context) / 1.8,
           child: BlocBuilder<PopularBloc, PopularState>(
@@ -195,10 +195,10 @@ class _MovieListScreenState extends State<MovieListScreen> {
                             title: movies[index].title ?? "-",
                             url: movies[index].backdropPath,
                             onTap: () {
-                              // Modular.to.pushNamed(
-                              //   Modular.get<Routes>().detailShow,
-                              //   arguments: movies[index],
-                              // );
+                              Modular.to.pushNamed(
+                                Modular.get<Routes>().detailModule,
+                                arguments: movies[index],
+                              );
                             },
                           );
                   },
@@ -257,10 +257,10 @@ class _MovieListScreenState extends State<MovieListScreen> {
                       title: movies[index].title ?? "-",
                       url: movies[index].backdropPath,
                       onTap: () {
-                        // Modular.to.pushNamed(
-                        //   Modular.get<Routes>().detailShow,
-                        //   arguments: movies[index],
-                        // );
+                        Modular.to.pushNamed(
+                          Modular.get<Routes>().detailModule,
+                          arguments: movies[index],
+                        );
                       },
                     );
                   },

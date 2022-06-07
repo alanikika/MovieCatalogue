@@ -22,6 +22,8 @@ dependencies:
     path: features/tv
   profile:
     path: features/profile
+  detail_content:
+    path: features/detail_content
 
   #libraries module
   core:

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shared/shared.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 
 class CardMovie extends StatelessWidget {
   final String? url;
@@ -28,19 +29,18 @@ class CardMovie extends StatelessWidget {
           child: Stack(
             children: [
               // Image
-              // ClipRRect(
-              //   borderRadius: BorderRadius.all(
-              //       Radius.circular(Dimens.standard_12(context))),
-              //   child: CachedNetworkImage(
-              //     imageUrl: url.imageOriginal,
-              //     height: Dimens.width(context) / 1.8,
-              //     width: Dimens.width(context) / 2.5,
-              //     fit: BoxFit.cover,
-              //     placeholder: (context, url) => const LoadingCircular(),
-              //     errorWidget: (context, url, error) => const ErrorImage(),
-              //   ),
-              // ),
-              const Text("=== IMAGE ===="),
+              ClipRRect(
+                borderRadius: BorderRadius.all(
+                    Radius.circular(Dimens.standard_12(context))),
+                child: CachedNetworkImage(
+                  imageUrl: url!.imageOriginal,
+                  height: Dimens.width(context) / 1.8,
+                  width: Dimens.width(context) / 2.5,
+                  fit: BoxFit.cover,
+                  placeholder: (context, url) => const LoadingCircular(),
+                  errorWidget: (context, url, error) => const ErrorImage(),
+                ),
+              ),
 
               // Background
               Container(
