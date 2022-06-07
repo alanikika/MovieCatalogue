@@ -1,16 +1,7 @@
-# movie_catalogue
+# Movie Catalog
+Aplikasi Film untuk mendemostrasikan penggunaan modern development tools dengan mengimplementasikan Clean Architecture, Modularization, BloC
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Petunjuk Menjalankan Aplikasi
+1. Clone proyek
+2. Run pub get pada setiap module dimulai dari module dependencies dan diakhiri oleh root modul proyek
+3. Jalankan aplikasi!
