@@ -6,6 +6,8 @@ import 'package:movie/presentation/bloc/now_playing_bloc/bloc.dart';
 import 'package:movie/presentation/bloc/popular_bloc/bloc.dart';
 import 'package:movie/presentation/bloc/upcoming_bloc/bloc.dart';
 import 'package:shared/shared.dart';
+import 'package:tv/presentation/bloc/on_the_air/bloc.dart';
+import 'package:tv/presentation/bloc/popular/bloc.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -25,6 +27,12 @@ class MyApp extends StatelessWidget {
         ),
         BlocProvider(
           create: (context) => Modular.get<UpComingBloc>(),
+        ),
+        BlocProvider(
+          create: (context) => Modular.get<OnTheAirBloc>(),
+        ),
+        BlocProvider(
+          create: (context) => Modular.get<PopularTvBloc>(),
         ),
       ],
       child: LayoutBuilder(

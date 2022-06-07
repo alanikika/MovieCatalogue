@@ -4,6 +4,7 @@ import 'package:home/home.dart';
 import 'package:movie/movie.dart';
 import 'package:movie_catalogue/ui/splash_screen.dart';
 import 'package:shared/shared.dart';
+import 'package:tv/tv.dart';
 
 class AppModule extends Module {
 
@@ -34,6 +35,10 @@ class AppModule extends Module {
     ModuleRoute(
       Modular.get<Routes>().homeModule,
       module: MovieModule(),
+    ),
+    ModuleRoute(
+      Modular.get<Routes>().homeModule,
+      module: TvModule(),
     ),
   ];
 }

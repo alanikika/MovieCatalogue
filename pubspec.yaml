@@ -18,6 +18,8 @@ dependencies:
     path: features/home
   movie:
     path: features/movie
+  tv:
+    path: features/tv
 
   #libraries module
   core:

@@ -3,4 +3,5 @@ class Routes {
   String homeModule = "/menu-module/";
   String menu = "/";
   String movie = "/movie";
+  String tv = "/tv";
 }

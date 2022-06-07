@@ -8,8 +8,11 @@ export 'common/routes.dart';
 export 'common/strings.dart';
 export 'common/styles.dart';
 export 'widget/card_movie.dart';
+export 'widget/card_tv.dart';
 export 'widget/custom_app_bar.dart';
 export 'widget/error_image.dart';
+export 'widget/no_data.dart';
+export 'widget/no_internet.dart';
 export 'widget/loading_circular.dart';
 
 import 'package:flutter_modular/flutter_modular.dart';

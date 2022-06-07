@@ -4,6 +4,7 @@ import 'package:flutter_modular/flutter_modular.dart';
 import 'package:home/presentation/bloc/bloc.dart';
 import 'package:movie/presentation/ui/movie_list_screen.dart';
 import 'package:shared/shared.dart';
+import 'package:tv/presentation/ui/tv_list_screen.dart';
 
 
 class MenuScreen extends StatefulWidget {
@@ -51,7 +52,7 @@ class _MenuScreenState extends State<MenuScreen> {
           if (state is MoviePageLoaded) {
             return const MovieListScreen();
           } else if (state is TvPageLoaded) {
-            // return TvScreen();
+            return const TvScreen();
           } else if (state is ProfilePageLoaded) {
             // return ProfileScreen();
           }
