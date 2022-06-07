@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:home/home.dart';
 import 'package:movie_catalogue/ui/splash_screen.dart';
@@ -11,6 +10,7 @@ class AppModule extends Module {
     Bind.lazySingleton((i) => Routes()),
     Bind.lazySingleton((i) => ImagePath()),
     Bind.lazySingleton((i) => CustomColors()),
+    Bind.lazySingleton((i) => Strings()),
   ];
 
   @override
