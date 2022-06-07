@@ -76,10 +76,10 @@ class _PopularTabScreenState extends State<PopularTabScreen> {
                     imageUrl: state.data[index].backdropPath,
                     rating: state.data[index].voteAverage.toString(),
                     onTap: () {
-                      // Modular.to.pushNamed(
-                      //   Modular.get<Routes>().detailShow,
-                      //   arguments: state.data[index],
-                      // );
+                      Modular.to.pushNamed(
+                        Modular.get<Routes>().detailModule,
+                        arguments: state.data[index],
+                      );
                     },
                   );
                 },

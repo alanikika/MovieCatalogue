@@ -1,4 +1,5 @@
 import 'package:core/core.dart';
+import 'package:detail_content/detail_content.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:home/home.dart';
 import 'package:movie/movie.dart';
@@ -33,12 +34,16 @@ class AppModule extends Module {
       module: HomeModule(),
     ),
     ModuleRoute(
-      Modular.get<Routes>().homeModule,
+      Modular.get<Routes>().movieModule,
       module: MovieModule(),
     ),
     ModuleRoute(
       Modular.get<Routes>().homeModule,
       module: TvModule(),
+    ),
+    ModuleRoute(
+      Modular.get<Routes>().detailModule,
+      module: DetailModule(),
     ),
   ];
 }

@@ -71,6 +71,13 @@ packages:
       relative: true
     source: path
     version: "0.0.1"
+  detail_content:
+    dependency: "direct main"
+    description:
+      path: "features/detail_content"
+      relative: true
+    source: path
+    version: "0.0.1"
   dio:
     dependency: transitive
     description:

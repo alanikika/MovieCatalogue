@@ -133,10 +133,10 @@ class _MovieListScreenState extends State<MovieListScreen> {
                             title: movies[index].title!,
                             url: movies[index].backdropPath,
                             onTap: () {
-                              // Modular.to.pushNamed(
-                              //   Modular.get<Routes>().detailShow,
-                              //   arguments: movies[index],
-                              // );
+                              Modular.to.pushNamed(
+                                Modular.get<Routes>().detailModule,
+                                arguments: movies[index],
+                              );
                             },
                           );
                   },
@@ -195,10 +195,10 @@ class _MovieListScreenState extends State<MovieListScreen> {
                             title: movies[index].title ?? "-",
                             url: movies[index].backdropPath,
                             onTap: () {
-                              // Modular.to.pushNamed(
-                              //   Modular.get<Routes>().detailShow,
-                              //   arguments: movies[index],
-                              // );
+                              Modular.to.pushNamed(
+                                Modular.get<Routes>().detailModule,
+                                arguments: movies[index],
+                              );
                             },
                           );
                   },
@@ -257,10 +257,10 @@ class _MovieListScreenState extends State<MovieListScreen> {
                       title: movies[index].title ?? "-",
                       url: movies[index].backdropPath,
                       onTap: () {
-                        // Modular.to.pushNamed(
-                        //   Modular.get<Routes>().detailShow,
-                        //   arguments: movies[index],
-                        // );
+                        Modular.to.pushNamed(
+                          Modular.get<Routes>().detailModule,
+                          arguments: movies[index],
+                        );
                       },
                     );
                   },
