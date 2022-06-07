@@ -1,5 +1,5 @@
-name: home
-description: Home module
+name: movie
+description: Movie module
 version: 0.0.1
 homepage:
 publish_to: 'none'
@@ -11,11 +11,6 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
-  #features
-  movie:
-    path: ../movie
-
 
   dependencies:
     path: ../../libraries/dependencies

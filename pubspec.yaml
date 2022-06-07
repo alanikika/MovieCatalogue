@@ -16,6 +16,8 @@ dependencies:
   #features
   home:
     path: features/home
+  movie:
+    path: features/movie
 
   #libraries module
   core:

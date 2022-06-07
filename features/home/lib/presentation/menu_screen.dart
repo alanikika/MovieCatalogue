@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:home/presentation/bloc/bloc.dart';
+import 'package:movie/presentation/ui/movie_list_screen.dart';
 import 'package:shared/shared.dart';
 
 
@@ -48,8 +49,7 @@ class _MenuScreenState extends State<MenuScreen> {
       body: BlocBuilder<HomeBloc, HomeState>(
         builder: (context, state) {
           if (state is MoviePageLoaded) {
-            return const Text("Movie page loaded");
-            // return MovieListScreen();
+            return const MovieListScreen();
           } else if (state is TvPageLoaded) {
             // return TvScreen();
           } else if (state is ProfilePageLoaded) {

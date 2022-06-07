@@ -1,5 +1,7 @@
+import 'package:core/core.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:home/home.dart';
+import 'package:movie/movie.dart';
 import 'package:movie_catalogue/ui/splash_screen.dart';
 import 'package:shared/shared.dart';
 
@@ -16,6 +18,7 @@ class AppModule extends Module {
   @override
   List<Module> get imports => [
     SharedModule(),
+    CoreModule(baseUrl: ApiConstants.baseUrl),
   ];
 
   @override
@@ -27,6 +30,10 @@ class AppModule extends Module {
     ModuleRoute(
       Modular.get<Routes>().homeModule,
       module: HomeModule(),
+    ),
+    ModuleRoute(
+      Modular.get<Routes>().homeModule,
+      module: MovieModule(),
     ),
   ];
 }

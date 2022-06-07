@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:home/presentation/bloc/bloc.dart';
+import 'package:movie/presentation/bloc/now_playing_bloc/bloc.dart';
 import 'package:shared/shared.dart';
 
 class MyApp extends StatelessWidget {
@@ -13,6 +14,9 @@ class MyApp extends StatelessWidget {
       providers: [
         BlocProvider(
           create: (context) => Modular.get<HomeBloc>(),
+        ),
+        BlocProvider(
+          create: (context) => Modular.get<NowPlayingBloc>(),
         ),
       ],
       child: LayoutBuilder(
