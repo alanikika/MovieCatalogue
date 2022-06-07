@@ -13,6 +13,10 @@ dependencies:
 
   cupertino_icons: ^1.0.2
 
+  #features
+  home:
+    path: features/home
+
   #libraries module
   core:
     path: libraries/core
