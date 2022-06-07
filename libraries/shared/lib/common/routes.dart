@@ -7,6 +7,6 @@ class Routes {
   String tvModule = "/tv-module/";
   String tv = "/tv";
   String profile = "/profile";
-  String detailModule = "/detail-module";
+  String detailModule = "/detail-module/";
   String detail = "/";
 }

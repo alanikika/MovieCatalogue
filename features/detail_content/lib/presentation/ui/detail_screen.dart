@@ -1,5 +1,5 @@
 import 'dart:async';
-
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:detail_content/presentation/bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -74,17 +74,16 @@ class _DetailScreenState extends State<DetailScreen> {
                   expandedHeight: Dimens.height(context) / 3,
                   floating: true,
                   pinned: false,
-                  flexibleSpace: const FlexibleSpaceBar(
+                  flexibleSpace: FlexibleSpaceBar(
                     centerTitle: true,
-                    background: Text("---- IMAGE HERE ---"),
-                    /*background: CachedNetworkImage(
+                    background: CachedNetworkImage(
                       imageUrl: movieArgument != null
-                          ? movieArgument.backdropPath.imageOriginal
-                          : tvArgument.backdropPath.imageOriginal,
+                          ? movieArgument!.backdropPath!.imageOriginal
+                          : tvArgument!.backdropPath!.imageOriginal,
                       fit: BoxFit.cover,
-                      placeholder: (context, url) => LoadingCircular(),
-                      errorWidget: (context, url, error) => ErrorImage(),
-                    ),*/
+                      placeholder: (context, url) => const LoadingCircular(),
+                      errorWidget: (context, url, error) => const ErrorImage(),
+                    ),
                   ),
                 ),
               ];

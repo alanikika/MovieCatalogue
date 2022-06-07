@@ -7,6 +7,7 @@ export 'common/image_path.dart';
 export 'common/routes.dart';
 export 'common/strings.dart';
 export 'common/styles.dart';
+export 'util/extension.dart';
 export 'widget/card_movie.dart';
 export 'widget/card_tv.dart';
 export 'widget/custom_app_bar.dart';

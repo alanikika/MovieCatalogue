@@ -30,8 +30,8 @@ class DetailModule extends Module {
     ChildRoute(
       Modular.get<Routes>().detail,
       child: (context, arg) => DetailScreen(
-        movieArgument: arg.data is Movie ? arg.data : null,
         tvArgument: arg.data is Results ? arg.data : null,
+        movieArgument: arg.data is Movie ? arg.data : null,
       ),
     ),
   ];

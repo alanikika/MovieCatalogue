@@ -171,7 +171,7 @@ class _MovieListScreenState extends State<MovieListScreen> {
         SizedBox(
           height: Dimens.standard_16(context),
         ),
-        Container(
+        SizedBox(
           width: Dimens.width(context),
           height: Dimens.width(context) / 1.8,
           child: BlocBuilder<PopularBloc, PopularState>(
