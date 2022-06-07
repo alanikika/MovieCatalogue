@@ -4,4 +4,5 @@ class Routes {
   String menu = "/";
   String movie = "/movie";
   String tv = "/tv";
+  String profile = "/profile";
 }

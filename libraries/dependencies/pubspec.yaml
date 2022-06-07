@@ -21,6 +21,7 @@ dependencies:
 #  cached_network_image: ^3.0.0
   fluttertoast: ^8.0.9
   liquid_pull_to_refresh: ^3.0.1
+  url_launcher: ^6.0.10
 
 dev_dependencies:
   flutter_test:

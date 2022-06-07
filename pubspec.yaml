@@ -20,6 +20,8 @@ dependencies:
     path: features/movie
   tv:
     path: features/tv
+  profile:
+    path: features/profile
 
   #libraries module
   core:

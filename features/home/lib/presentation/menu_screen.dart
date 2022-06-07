@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:home/presentation/bloc/bloc.dart';
 import 'package:movie/presentation/ui/movie_list_screen.dart';
+import 'package:profile/presentation/ui/profile_screen.dart';
 import 'package:shared/shared.dart';
 import 'package:tv/presentation/ui/tv_list_screen.dart';
 
@@ -54,7 +55,7 @@ class _MenuScreenState extends State<MenuScreen> {
           } else if (state is TvPageLoaded) {
             return const TvScreen();
           } else if (state is ProfilePageLoaded) {
-            // return ProfileScreen();
+            return const ProfileScreen();
           }
           return const SizedBox();
         },
